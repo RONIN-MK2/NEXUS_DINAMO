@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at 30% 40%, #0d1424, #010101);
+    color: #eee;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fff, #0af);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.logo span {
+    font-size: 0.9rem;
+    color: #0af;
+    background: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 0.5rem;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #0af;
+    color: #0af;
+}
+
+.nav-links a:hover {
+    color: #0af;
+}
+
+.contact-bento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 3rem;
+    flex-wrap: wrap;
+    padding: 7rem 2rem 4rem;
+}
+
+.contact-card, .map-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    padding: 2rem;
+    border-radius: 48px;
+    width: 360px;
+    text-align: center;
+    border: 1px solid rgba(0,255,255,0.3);
+    transition: 0.3s;
+    animation: floatGlow 3s infinite alternate;
+}
+
+@keyframes floatGlow {
+    from { box-shadow: 0 0 5px rgba(0,255,255,0.2); transform: translateY(0); }
+    to { box-shadow: 0 0 25px rgba(0,255,255,0.5); transform: translateY(-5px); }
+}
+
+.contact-card:hover, .map-card:hover {
+    border-color: cyan;
+}
+
+.contact-svg, .map-svg {
+    margin-bottom: 1rem;
+}
+
+.contact-card h2, .map-card h3 {
+    margin-bottom: 1rem;
+}
+
+.contact-card p {
+    margin: 0.6rem 0;
+    opacity: 0.9;
+}
+
+.secret-contact-btn {
+    margin-top: 1.2rem;
+    background: linear-gradient(90deg, #00d4ff, #0066ff);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+}
+
+.secret-contact-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px #00d4ff;
+}
+
+#tripleClickLogo {
+    transition: 0.2s;
+    display: inline-block;
+}
+
+#tripleClickLogo:hover {
+    transform: scale(1.1) rotate(10deg);
+    text-shadow: 0 0 15px cyan;
+}
+
+@media (max-width: 768px) {
+    .contact-card, .map-card {
+        width: 90%;
+    }
+}

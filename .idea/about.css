@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(145deg, #0b1120, #03070f);
+    color: white;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fff, #0af);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.logo span {
+    font-size: 0.9rem;
+    color: #0af;
+    background: none;
+    -webkit-background-clip: unset;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 0.5rem;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #0af;
+    color: #0af;
+}
+
+.nav-links a:hover {
+    color: #0af;
+}
+
+.tech-hero {
+    padding: 9rem 2rem 4rem;
+    text-align: center;
+}
+
+.flicker-title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    animation: flicker 1.5s infinite;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; text-shadow: 0 0 5px cyan; }
+    50% { opacity: 0.6; text-shadow: 0 0 20px #0066ff; }
+    100% { opacity: 1; text-shadow: 0 0 5px cyan; }
+}
+
+.tech-svg-banner {
+    margin: 1rem 0 2rem;
+}
+
+.tech-showcase {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.tech-item {
+    background: rgba(0,255,255,0.08);
+    padding: 1.2rem 2rem;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+    border: 1px solid rgba(0,255,255,0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.tech-item:hover {
+    background: rgba(0,255,255,0.2);
+    transform: scale(1.05);
+    border-color: cyan;
+    box-shadow: 0 0 20px rgba(0,255,255,0.3);
+}
+
+.tech-icon {
+    font-size: 1.8rem;
+}
+
+.tech-item-svg {
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.lab-map {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: rgba(0,0,0,0.3);
+    margin-top: 2rem;
+}
+
+.lab-map h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.map-hover-area {
+    background: linear-gradient(135deg, #1a2a3a, #0a1a2a);
+    width: 280px;
+    margin: 20px auto;
+    padding: 18px;
+    border-radius: 50px;
+    transition: 0.3s;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid cyan;
+}
+
+.map-hover-area:hover {
+    background: cyan;
+    color: black;
+    transform: scale(1.02);
+    box-shadow: 0 0 25px cyan;
+}
+
+@media (max-width: 768px) {
+    .flicker-title {
+        font-size: 2rem;
+    }
+    .tech-item {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}

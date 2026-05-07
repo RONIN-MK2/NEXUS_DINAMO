@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты • Nexus Dynamics</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">⚡ NEXUS <span>DYNAMICS</span></div>
+    <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">Технологии</a></li>
+        <li><a href="contact.html" class="active">Контакты</a></li>
+    </ul>
+</nav>
+
+<div class="contact-bento">
+    <div class="contact-card">
+        <div class="contact-svg">
+            <svg width="80" height="80" viewBox="0 0 100 100">
+                <circle cx="50" cy="40" r="15" fill="none" stroke="cyan" stroke-width="2"/>
+                <path d="M30,75 Q50,60 70,75" fill="none" stroke="cyan" stroke-width="2"/>
+                <rect x="45" y="55" width="10" height="15" fill="none" stroke="cyan" stroke-width="1.5"/>
+            </svg>
+        </div>
+        <h2>📡 Центр управления</h2>
+        <p>📍 Москва, Сколково, Инновационный центр</p>
+        <p>📞 +7 999 123-45-67</p>
+        <p>✉️ reactor@nexus.com</p>
+        <button id="easterButtonContact" class="secret-contact-btn">🔮 Секретная частота</button>
+        <div id="secretContactImage" style="margin-top: 16px;"></div>
+    </div>
+
+    <div class="map-card">
+        <div class="map-svg">
+            <svg width="120" height="120" viewBox="0 0 120 120">
+                <rect x="20" y="20" width="80" height="80" fill="none" stroke="cyan" stroke-width="2" rx="5">
+                    <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+                </rect>
+                <circle cx="60" cy="60" r="10" fill="cyan" opacity="0.5">
+                    <animate attributeName="r" values="8;14;8" dur="1.5s" repeatCount="indefinite"/>
+                </circle>
+                <text x="60" y="115" text-anchor="middle" fill="cyan" font-size="8">ХАБ-42</text>
+            </svg>
+        </div>
+        <h3>🔐 Нажми на логотип 3 раза</h3>
+        <div id="tripleClickLogo" style="font-size: 4rem; cursor: pointer; transition: 0.2s;">🌀</div>
+        <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">секретный архив Nexus</p>
+    </div>
+</div>
+
+<script src="contact.js"></script>
+</body>
+</html>
